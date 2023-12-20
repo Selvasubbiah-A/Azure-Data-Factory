@@ -1,0 +1,42 @@
+{
+	"name": "ds_AzSQL",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "Ls_AzSQL",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "Date",
+				"type": "nvarchar"
+			},
+			{
+				"name": "SPX",
+				"type": "nvarchar"
+			},
+			{
+				"name": "GLD",
+				"type": "nvarchar"
+			},
+			{
+				"name": "USO",
+				"type": "nvarchar"
+			},
+			{
+				"name": "SLV",
+				"type": "nvarchar"
+			},
+			{
+				"name": "EUR/USD",
+				"type": "nvarchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "GoldData"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
