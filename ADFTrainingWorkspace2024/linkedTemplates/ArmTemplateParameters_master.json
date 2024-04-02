@@ -1,0 +1,48 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "ADFTrainingWorkspace2024"
+		},
+		"AzureBlobStorage1_connectionString": {
+			"value": ""
+		},
+		"AzureDataLakeStorage1_accountKey": {
+			"value": ""
+		},
+		"Ls_AzSQL_connectionString": {
+			"value": ""
+		},
+		"demols_connectionString": {
+			"value": ""
+		},
+		"ls_ADLS_accountKey": {
+			"value": ""
+		},
+		"ls_Onprem_connectionString": {
+			"value": ""
+		},
+		"ls_azuresql_connectionString": {
+			"value": ""
+		},
+		"ls_destazuresql_connectionString": {
+			"value": ""
+		},
+		"AzureDataLakeStorage1_properties_typeProperties_url": {
+			"value": "https://samplestorage2024.dfs.core.windows.net/"
+		},
+		"ls_ADLS_properties_typeProperties_url": {
+			"value": "https://selvaadlsstorage.dfs.core.windows.net/"
+		},
+		"ls_rest_properties_typeProperties_url": {
+			"value": "https://dummy.restapiexample.com/api/v1/employees"
+		},
+		"containerUri": {
+			"value": ""
+		},
+		"containerSasToken": {
+			"value": ""
+		}
+	}
+}
