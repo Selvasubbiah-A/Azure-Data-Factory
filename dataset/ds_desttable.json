@@ -1,0 +1,17 @@
+{
+	"name": "ds_desttable",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_destazuresql",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "Train",
+			"table": "DimAccount"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

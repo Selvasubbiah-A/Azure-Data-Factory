@@ -1,0 +1,17 @@
+{
+	"name": "desttest",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_destazuresql",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "Account"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
