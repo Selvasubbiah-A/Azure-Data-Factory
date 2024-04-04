@@ -50,7 +50,13 @@
 				"typeProperties": {
 					"dataflow": {
 						"referenceName": "ds_employeevalidation",
-						"type": "DataFlowReference"
+						"type": "DataFlowReference",
+						"parameters": {
+							"Validdate": {
+								"value": "'\\'@{activity('Lookup1').output.Validdate}\\'",
+								"type": "Expression"
+							}
+						}
 					},
 					"compute": {
 						"coreCount": 8,
