@@ -53,7 +53,7 @@
 						"type": "DataFlowReference",
 						"parameters": {
 							"Validdate": {
-								"value": "'\\'@{activity('Lookup1').output.firstRow.Validdate}\\'",
+								"value": "'@{activity('Lookup1').output.firstRow.Validdate}'",
 								"type": "Expression"
 							}
 						}
