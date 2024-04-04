@@ -39,7 +39,7 @@
 				"     allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     isolationLevel: 'READ_UNCOMMITTED',",
-				"     query: ('SELECT * FROM Employee WHERE JoiningDate >' + $Validdate),",
+				"     query: ('SELECT * FROM Employee WHERE JoiningDate > CONVERT(DATE,'+$Validdate+' )'),",
 				"     format: 'query') ~> source1",
 				"source1 derive(SalaryRate = iif(Salary > 60000, 'High Salary', iif(Salary > 55000,'Intermediate','Low Salary'))) ~> derivedColumn1",
 				"derivedColumn1 sink(allowSchemaDrift: true,",
