@@ -12,8 +12,20 @@
 					"name": "source1"
 				}
 			],
-			"sinks": [],
-			"transformations": [],
+			"sinks": [
+				{
+					"dataset": {
+						"referenceName": "destemployeefile",
+						"type": "DatasetReference"
+					},
+					"name": "sink1"
+				}
+			],
+			"transformations": [
+				{
+					"name": "derivedColumn1"
+				}
+			],
 			"scriptLines": [
 				"parameters{",
 				"     Validdate as string",
@@ -28,7 +40,12 @@
 				"     validateSchema: false,",
 				"     isolationLevel: 'READ_UNCOMMITTED',",
 				"     query: ('SELECT * FROM Employee WHERE JoiningDate >' + $Validdate),",
-				"     format: 'query') ~> source1"
+				"     format: 'query') ~> source1",
+				"source1 derive(SalaryRate = iif(Salary > 60000, 'High Salary', iif(Salary > 55000,'Intermediate','Low Salary'))) ~> derivedColumn1",
+				"derivedColumn1 sink(allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true) ~> sink1"
 			]
 		}
 	}
