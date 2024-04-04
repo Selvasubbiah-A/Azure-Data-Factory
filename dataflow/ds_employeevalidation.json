@@ -1,0 +1,35 @@
+{
+	"name": "ds_employeevalidation",
+	"properties": {
+		"type": "MappingDataFlow",
+		"typeProperties": {
+			"sources": [
+				{
+					"dataset": {
+						"referenceName": "ds_employeevalidation",
+						"type": "DatasetReference"
+					},
+					"name": "source1"
+				}
+			],
+			"sinks": [],
+			"transformations": [],
+			"scriptLines": [
+				"parameters{",
+				"     Validdate as string",
+				"}",
+				"source(output(",
+				"          EmployeeID as integer,",
+				"          EmployeeName as string,",
+				"          Salary as decimal(10,2),",
+				"          JoiningDate as date",
+				"     ),",
+				"     allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     isolationLevel: 'READ_UNCOMMITTED',",
+				"     query: ('SELECT * FROM Employee WHERE JoiningDate >' + $Validdate),",
+				"     format: 'query') ~> source1"
+			]
+		}
+	}
+}
