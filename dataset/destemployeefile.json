@@ -11,8 +11,8 @@
 			"location": {
 				"type": "AzureBlobStorageLocation",
 				"fileName": "employee.csv",
-				"folderPath": "Test",
-				"container": "Assessment-3"
+				"folderPath": "test",
+				"container": "assessment-3"
 			},
 			"columnDelimiter": ",",
 			"escapeChar": "\\",
