@@ -25,7 +25,7 @@
 						"referenceName": "ds_validdate",
 						"type": "DatasetReference"
 					},
-					"firstRowOnly": false
+					"firstRowOnly": true
 				}
 			},
 			{
@@ -53,7 +53,7 @@
 						"type": "DataFlowReference",
 						"parameters": {
 							"Validdate": {
-								"value": "'\\'@{activity('Lookup1').output.Validdate}\\'",
+								"value": "'\\'@{activity('Lookup1').output.firstRow.Validdate}\\'",
 								"type": "Expression"
 							}
 						}
@@ -66,6 +66,11 @@
 				}
 			}
 		],
+		"variables": {
+			"Validdate": {
+				"type": "String"
+			}
+		},
 		"annotations": []
 	}
 }
