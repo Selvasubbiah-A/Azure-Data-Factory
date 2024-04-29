@@ -55,7 +55,7 @@
 		],
 		"typeProperties": {
 			"schema": "dbo",
-			"table": "Account"
+			"table": "MovieData"
 		}
 	},
 	"type": "Microsoft.DataFactory/factories/datasets"
